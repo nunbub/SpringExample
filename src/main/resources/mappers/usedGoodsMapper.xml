@@ -4,6 +4,22 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
-<mapper>
+<mapper namespace="com.nunbub.spring.ex.database.dao.UsedGoodsDAO">
+
+	<select id="selectUsedGoodsList" resultType="com.nunbub.spring.ex.database.model.UsedGoods">
+		SELECT 
+			`id`
+			, `sellerID`
+			, `title`
+			, `price`
+			, `description`
+			, `picture`
+			, `createdAt`
+			, `updatedAt`				
+		FROM 
+			`used_goods`;
+		
+		
+	</select>
 	
 </mapper>
