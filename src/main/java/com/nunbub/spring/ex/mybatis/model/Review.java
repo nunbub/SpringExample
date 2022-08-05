@@ -3,7 +3,7 @@ package com.nunbub.spring.ex.mybatis.model;
 import java.util.Date;
 
 public class Review {
-
+	
 	private int id;
 	private int storeId;
 	private String menu;
@@ -12,7 +12,6 @@ public class Review {
 	private String review;
 	private Date createdAt;
 	private Date updatedAt;
-	
 	
 	public int getId() {
 		return id;
@@ -64,4 +63,5 @@ public class Review {
 	}
 	
 	
+
 }
