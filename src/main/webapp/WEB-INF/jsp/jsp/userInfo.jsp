@@ -11,6 +11,10 @@
 	<h1>${title}</h1>
 	<table border="1">
 		<tr>
+			<th>id</th>
+			<td>${user.id }</td>
+		</tr>
+		<tr>
 			<th>이름</th>
 			<td>${user.name}</td>
 		</tr>

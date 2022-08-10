@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -56,7 +57,19 @@ public class UserController {
 		
 	}
 	
-	
+	@PostMapping("/add/view")
+	public String addUserView(
+			@ModelAttribute User user // user 로 전달되는 request parameter가 멤버변수 기준으로 객체로 저장
+			, Model model) {
+		
+		
+		
+		int count = userBO.addUserByObject(user);
+		
+		model.addAttribute("user", user);
+		
+		return "jsp/userInfo";
+	}
 	
 	
 	

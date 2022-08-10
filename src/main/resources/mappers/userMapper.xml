@@ -29,6 +29,29 @@
 		)	
 	
 	</insert>
+	<insert id="insertUserByObject" parameterType="com.nunbub.spring.ex.jsp.model.User"
+			useGeneratedKeys="true" keyProperty="id">
+	
+		INSERT INTO
+			`new_user`
+		(
+			`name`
+			, `yyyymmdd`
+			, `introduce`
+			, `email`
+			, `createdAt`
+			, `updatedAt`
+		)
+		VALUE
+		(
+			#{name}
+			, #{yyyymmdd}
+			, #{introduce}
+			, #{email}
+			, now()
+			, now()
+		)
+	</insert>
 	
 	<select id="selectLastUser" resultType="com.nunbub.spring.ex.jsp.model.User">
 	

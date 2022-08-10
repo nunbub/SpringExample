@@ -18,6 +18,10 @@ public class UserBO {
 		return userDAO.insertUser(name, birthday, introduce, email);
 	}
 	
+	public int addUserByObject(User user) {
+		return userDAO.insertUserByObject(user);
+	}
+	
 	// 최근 등록된 사용자 가져오기
 	public User getLastUser() {
 		
