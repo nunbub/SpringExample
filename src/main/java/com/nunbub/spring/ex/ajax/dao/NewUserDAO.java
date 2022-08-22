@@ -16,4 +16,6 @@ public interface NewUserDAO {
 			@Param("name")String name
 			, @Param("birthDay")String birthDay
 			, @Param("email")String email);
+	
+	public int selectCountEmail(@Param("email") String email);
 }
